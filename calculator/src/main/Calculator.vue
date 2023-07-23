@@ -1,14 +1,21 @@
 <template>
   <div class="calculator">
+    <Display :value="displayValue" />
     <Button />
   </div>
 </template>
 
 <script>
 import Button from "../componentes/Button";
+import Display from "../componentes/Display";
 export default {
   name: "DefaultCalculator",
-  components: { Button },
+  components: { Button, Display },
+  data: function () {
+    return {
+      displayValue: "0",
+    };
+  },
 };
 </script>
 
